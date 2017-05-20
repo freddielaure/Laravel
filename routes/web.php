@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+
+
+// Methode pour ouvrir la Page hinzufuegen
+Route::get('hinzufuegen', 'hinzufuegenController@index');
